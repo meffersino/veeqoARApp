@@ -1,0 +1,29 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{8955C181-5EE9-8990-D8ED-E0F9D2B5F5FD}") = "VeeqoApp", "Assembly-CSharp.csproj", "{CA06A385-5DAF-CCAA-23AF-8F4F35C80EB2}"
+EndProject
+Project("{8955C181-5EE9-8990-D8ED-E0F9D2B5F5FD}") = "VeeqoApp", "Assembly-CSharp-Editor.csproj", "{5418EFAF-D909-4588-15F3-1DD076022F78}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CA06A385-5DAF-CCAA-23AF-8F4F35C80EB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA06A385-5DAF-CCAA-23AF-8F4F35C80EB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA06A385-5DAF-CCAA-23AF-8F4F35C80EB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA06A385-5DAF-CCAA-23AF-8F4F35C80EB2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5418EFAF-D909-4588-15F3-1DD076022F78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5418EFAF-D909-4588-15F3-1DD076022F78}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5418EFAF-D909-4588-15F3-1DD076022F78}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5418EFAF-D909-4588-15F3-1DD076022F78}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal
