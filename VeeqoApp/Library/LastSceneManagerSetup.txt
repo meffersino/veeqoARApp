@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/ARToolKit5-Unity/Example Scenes/CubemarkerScene.unity
+- path: Assets/CameraScene.unity
   isLoaded: 1
   isActive: 1
