@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2017
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VeeqoAR", "VeeqoAR.csproj", "{D47FD1F8-0690-3890-E366-16CE1E9FA4AD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VeeqoAR.Editor", "VeeqoAR.Editor.csproj", "{BC829A4F-4BB8-A6D1-4DE9-A942C97BCC1C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D47FD1F8-0690-3890-E366-16CE1E9FA4AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D47FD1F8-0690-3890-E366-16CE1E9FA4AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D47FD1F8-0690-3890-E366-16CE1E9FA4AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D47FD1F8-0690-3890-E366-16CE1E9FA4AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC829A4F-4BB8-A6D1-4DE9-A942C97BCC1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC829A4F-4BB8-A6D1-4DE9-A942C97BCC1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC829A4F-4BB8-A6D1-4DE9-A942C97BCC1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC829A4F-4BB8-A6D1-4DE9-A942C97BCC1C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
