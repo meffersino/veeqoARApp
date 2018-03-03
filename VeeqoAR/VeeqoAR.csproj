@@ -79,6 +79,9 @@
     <Reference Include="UnityEngine.HoloLens">
       <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
     </Reference>
+    <Reference Include="zxing.unity">
+      <HintPath>Assets/QR Scanner/Scripts/zxing.unity.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\ARToolKit5-Unity\Examples\Fisticuffs\Scripts\AnimationBehaviors.cs" />
@@ -101,6 +104,21 @@
     <Compile Include="Assets\ARToolKit5-Unity\Scripts\ARTransitionalCamera.cs" />
     <Compile Include="Assets\ARToolKit5-Unity\Scripts\ARUtilityFunctions.cs" />
     <Compile Include="Assets\ARToolKit5-Unity\Scripts\PluginFunctions.cs" />
+    <Compile Include="Assets\QR Scanner\Scripts\External\WizUtils\Logger\Log.cs" />
+    <Compile Include="Assets\QR Scanner\Scripts\External\WizUtils\Logger\LogLevel.cs" />
+    <Compile Include="Assets\QR Scanner\Scripts\External\WizUtils\Logger\Services\ConsoleService.cs" />
+    <Compile Include="Assets\QR Scanner\Scripts\External\WizUtils\Logger\Services\FileService.cs" />
+    <Compile Include="Assets\QR Scanner\Scripts\External\WizUtils\Logger\Services\ILogService.cs" />
+    <Compile Include="Assets\QR Scanner\Scripts\Interfaces\IParser.cs" />
+    <Compile Include="Assets\QR Scanner\Scripts\Interfaces\IScanner.cs" />
+    <Compile Include="Assets\QR Scanner\Scripts\Interfaces\IWebcam.cs" />
+    <Compile Include="Assets\QR Scanner\Scripts\Parser\ParserResult.cs" />
+    <Compile Include="Assets\QR Scanner\Scripts\Parser\ZXingParser.cs" />
+    <Compile Include="Assets\QR Scanner\Scripts\Scanner\Scanner.cs" />
+    <Compile Include="Assets\QR Scanner\Scripts\Scanner\ScannerStatus.cs" />
+    <Compile Include="Assets\QR Scanner\Scripts\Settings\ScannerSettings.cs" />
+    <Compile Include="Assets\QR Scanner\Scripts\Webcam\UnityWebcam.cs" />
+    <Compile Include="Assets\QRScanner.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\ARToolKit5-Unity\CHANGELOG.txt" />
