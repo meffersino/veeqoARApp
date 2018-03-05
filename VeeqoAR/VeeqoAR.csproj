@@ -119,6 +119,7 @@
     <Compile Include="Assets\QR Scanner\Scripts\Settings\ScannerSettings.cs" />
     <Compile Include="Assets\QR Scanner\Scripts\Webcam\UnityWebcam.cs" />
     <Compile Include="Assets\QRScanner.cs" />
+    <Compile Include="Assets\SceneLoader.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\ARToolKit5-Unity\CHANGELOG.txt" />
