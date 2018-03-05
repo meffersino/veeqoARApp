@@ -84,6 +84,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\_Scripts\QRScanner.cs" />
+    <Compile Include="Assets\_Scripts\SceneLoader.cs" />
     <Compile Include="Assets\ARToolKit5-Unity\Examples\Fisticuffs\Scripts\AnimationBehaviors.cs" />
     <Compile Include="Assets\ARToolKit5-Unity\Examples\Fisticuffs\Scripts\CharacterBehaviors.cs" />
     <Compile Include="Assets\ARToolKit5-Unity\Examples\Fisticuffs\Scripts\FisticuffsController.cs" />
@@ -118,8 +120,6 @@
     <Compile Include="Assets\QR Scanner\Scripts\Scanner\ScannerStatus.cs" />
     <Compile Include="Assets\QR Scanner\Scripts\Settings\ScannerSettings.cs" />
     <Compile Include="Assets\QR Scanner\Scripts\Webcam\UnityWebcam.cs" />
-    <Compile Include="Assets\QRScanner.cs" />
-    <Compile Include="Assets\SceneLoader.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\ARToolKit5-Unity\CHANGELOG.txt" />
