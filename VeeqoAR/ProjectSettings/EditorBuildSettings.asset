@@ -6,11 +6,11 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 0
-    path: Assets/ARToolKit5-Unity/Example Scenes/CubemarkerScene.unity
+    path: 
     guid: 91e0064a3efe34200aa60dba3775ddbf
   - enabled: 1
-    path: Assets/MainMenu.unity
+    path: Assets/_Scenes/MainMenu.unity
     guid: 125f664fc580dd548afb83d14b9d3164
   - enabled: 1
-    path: Assets/CameraScene.unity
+    path: Assets/_Scenes/CameraScene.unity
     guid: 2848e333482e7c345baeff17a0368d2b

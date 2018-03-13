@@ -103,9 +103,9 @@ public class ARTrackedObject : MonoBehaviour
 
 	void Start()
 	{
-		//ARController.Log(LogTag + "Start()");
-
-		if (Application.isPlaying) {
+        //ARController.Log(LogTag + "Start()");
+        
+        if (Application.isPlaying) {
 			// In Player, set initial visibility to not visible.
 			for (int i = 0; i < this.transform.childCount; i++) this.transform.GetChild(i).gameObject.SetActive(false);
 		} else {

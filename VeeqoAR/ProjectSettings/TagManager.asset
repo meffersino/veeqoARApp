@@ -8,6 +8,9 @@ TagManager:
   - Character
   - Glove
   - Target
+  - MegaHit
+  - Controller
+  - ARText
   layers:
   - Default
   - TransparentFX

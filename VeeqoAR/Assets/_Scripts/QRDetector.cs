@@ -7,14 +7,16 @@ using ZXing.QrCode;
 
 public class QRDetector : MonoBehaviour {
     private ARCamera aRcam;
-    private ARTrackedObject arto;
+    private ARTrackedObject arTrackedObj;
     private Camera c = null;
     private Texture2D tex;
     private string CurrentQR;
     private int width, height;
     private BarcodeReader barcodeReader;
     private RenderTexture rt;
-    private TextMesh text;
+
+    public TextMesh arText;
+    
 
     public float GPUTransferRate = 1.0f;
     private float timeSinceLastGPUTransfer = 0.0f;
@@ -32,12 +34,9 @@ public class QRDetector : MonoBehaviour {
         //Find ARCamera and Camera objects
         aRcam = FindObjectOfType<ARCamera>(); // (or FindObjectsOfType(typeof(ARCamera)) as ARCamera[])
         c = aRcam.gameObject.GetComponent<Camera>();
-
-        //Trying to find text overlay to edit based on QR
-        //GameObject textObject = GameObject.Find("Text");
-        //arto = FindObjectOfType<ARTrackedObject>();
-        //text = textObject.gameObject.GetComponent<TextMesh>();
-
+        
+        arTrackedObj = FindObjectOfType<ARTrackedObject>();
+        
         W = c.pixelWidth;
         H = c.pixelHeight;
 
@@ -46,8 +45,6 @@ public class QRDetector : MonoBehaviour {
         barcodeReader = new BarcodeReader { AutoRotate = false };
 
         //Debug.Log(LogTag + "QR Detection Initialised");
-
-
     }
 
     // Update is called once per frame
@@ -72,7 +69,7 @@ public class QRDetector : MonoBehaviour {
             {
                 CurrentQR = result.Text;
                 Debug.Log(LogTag + CurrentQR);
-                //text.text = CurrentQR;
+                arText.text = CurrentQR;
             }
 
             //Debug.Log(LogTag + "Attempted QR Detection");
