@@ -16,7 +16,6 @@ public class QRDetector : MonoBehaviour {
     private RenderTexture rt;
 
     public TextMesh arText;
-    
 
     public float GPUTransferRate = 1.0f;
     private float timeSinceLastGPUTransfer = 0.0f;
