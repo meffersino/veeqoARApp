@@ -1,8 +1,2 @@
 <linker>
-	<assembly fullname="Assembly-CSharp">
-		<type fullname="SceneLoader">
-			<method name="LoadScene"/>
-			<method name="QuitApp"/>
-		</type>
-	</assembly>
 </linker>
