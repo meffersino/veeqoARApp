@@ -4,6 +4,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using ZXing;
 using ZXing.QrCode;
+using API;
+using UnityEngine.UI;
+using Newtonsoft.Json.Linq;
 
 public class QRDetector : MonoBehaviour {
     private ARCamera aRcam;
@@ -66,9 +69,24 @@ public class QRDetector : MonoBehaviour {
             var result = barcodeReader.Decode(tex.GetPixels32(), W, H);
             if (result != null)
             {
+                //Fetch API Key
+                string API_Key = System.IO.File.ReadAllText(@"C:\Users\Thomas Fisher\Documents\GitHub\API Keys\API-KEY.txt");
+                Debug.Log("API_KEY = " + API_Key);
+
                 CurrentQR = result.Text;
                 Debug.Log(LogTag + CurrentQR);
-                arText.text = CurrentQR;
+
+                //Product p = API_Calls.getProductByURL(CurrentQR);
+
+                Debug.Log("Making API Request.");
+                Dictionary<string, string> headers = new Dictionary<string, string>();
+                headers.Add("Content-Type", "application/json");
+                headers.Add("x-api-key", API_Key);
+                ///GET by IIS hosting...
+                WWW api = new WWW(CurrentQR, null, headers);
+                StartCoroutine(WaitForWWW(api));
+
+                //arText.text = .Title;
             }
 
             //Debug.Log(LogTag + "Attempted QR Detection");
@@ -79,5 +97,23 @@ public class QRDetector : MonoBehaviour {
         }
 
         //Debug.Log(LogTag + "End QR Detection");
+    }
+
+    IEnumerator WaitForWWW(WWW www)
+    {
+        yield return www;
+
+        string txt = "";
+        if (string.IsNullOrEmpty(www.error))
+            txt = www.text;  //text of success
+        else
+            txt = www.error;  //error
+
+        JObject json = JObject.Parse(txt);
+        Product p = API_Calls.parseToProduct(json);
+
+        arText.text = p.Title;
+
+        Debug.Log("API Response Received");
     }
 }
