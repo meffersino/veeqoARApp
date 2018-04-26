@@ -44,6 +44,13 @@ using System.IO;
 using System.Runtime.InteropServices;
 using System.Threading;
 
+using System.Collections;
+using ZXing;
+using ZXing.QrCode;
+using API;
+using UnityEngine.UI;
+using Newtonsoft.Json.Linq;
+
 public enum ContentMode
 {
 	Stretch,
@@ -363,11 +370,16 @@ public class ARController : MonoBehaviour
         
 		// Ensure ARMarker objects that were instantiated/deserialized before the native interface came up are all loaded.
 		ARMarker[] markers = FindObjectsOfType(typeof(ARMarker)) as ARMarker[];
+        int numberOfMarkers = 0;
 		foreach (ARMarker m in markers) {
 			m.Load();
+            numberOfMarkers++;
 		}
-		
-		if (Application.isPlaying) {
+
+        //Debug.log("Found %d markers", numberOfMarkers);
+
+
+        if (Application.isPlaying) {
 			
 			// Player start.
 			if (AutoStartAR) {

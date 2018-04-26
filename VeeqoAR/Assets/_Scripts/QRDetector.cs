@@ -81,7 +81,7 @@ public class QRDetector : MonoBehaviour {
                 Debug.Log("Making API Request.");
                 Dictionary<string, string> headers = new Dictionary<string, string>();
                 headers.Add("Content-Type", "application/json");
-                headers.Add("x-api-key", API_Key);
+                headers.Add("x-api-key", "029813c59f604d802b7298c4727ac302");
                 ///GET by IIS hosting...
                 WWW api = new WWW(CurrentQR, null, headers);
                 StartCoroutine(WaitForWWW(api));

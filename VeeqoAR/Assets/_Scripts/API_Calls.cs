@@ -51,6 +51,7 @@ namespace API
         static public string BASE_URL = "https://api.veeqo.com/";
         static public string PRODUCTS_URL = "products/";
 
+        private static string API_Key = System.IO.File.ReadAllText(@"C:\Users\Thomas Fisher\Documents\GitHub\API Keys\API-KEY.txt");
         /*
         public static void Main()
         {
@@ -68,7 +69,6 @@ namespace API
         public static Product getProductByURL(string URL)
         {
             //Fetch API Key
-            string API_Key = System.IO.File.ReadAllText(@"C:\Users\Thomas Fisher\Documents\GitHub\API Keys\API-KEY.txt");
             Debug.Log("API_KEY = " + API_Key);
             //Create get request and attatch API Key
             HttpWebRequest GETRequest = (HttpWebRequest)WebRequest.Create(URL);
@@ -114,7 +114,6 @@ namespace API
             //Create URL
             string URL = BASE_URL + PRODUCTS_URL + productId;
             //Fetch API Key **** EDIT THE FILE PATH ****
-            string API_Key = System.IO.File.ReadAllText(@"/Users/kristian/Projects/API_Call_Test/API_Call_Test/API-KEY.txt");
 
             //Create get request and attatch API Key
             HttpWebRequest GETRequest = (HttpWebRequest)WebRequest.Create(URL);

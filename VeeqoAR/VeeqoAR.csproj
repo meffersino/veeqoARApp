@@ -79,11 +79,14 @@
     <Reference Include="UnityEngine.HoloLens">
       <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Newtonsoft.Json">
+      <HintPath>Assets/packages/Unity.Newtonsoft.Json.7.0.0.0/lib/net35-Client/Unity.Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="zxing.unity">
       <HintPath>Assets/QR Scanner/Scripts/zxing.unity.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.Newtonsoft.Json">
-      <HintPath>Assets/packages/Unity.Newtonsoft.Json.7.0.0.0/lib/net35-Client/Unity.Newtonsoft.Json.dll</HintPath>
+    <Reference Include="Managed/Mono.Cecil">
+      <HintPath>C:/Program Files/Unity/Editor/Data\Managed/Mono.Cecil.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -123,6 +126,7 @@
     <None Include="Assets\ARToolKit5-Unity\Resources\Shaders\VideoPlaneNoLight.shader" />
     <None Include="Assets\ARToolKit5-Unity\Resources\ardata\markers\patt.hiro.txt" />
     <None Include="Assets\ARToolKit5-Unity\Resources\ardata\markers\patt.kanji.txt" />
+    <None Include="Assets\ARToolKit5-Unity\Resources\ardata\markers\patt.veeqobw.txt" />
     <None Include="Assets\Plugins\Android\AndroidManifest.xml" />
     <None Include="Assets\packages\Unity.Newtonsoft.Json.7.0.0.0\lib\net35-Client\Unity.Newtonsoft.Json.xml" />
   </ItemGroup>
