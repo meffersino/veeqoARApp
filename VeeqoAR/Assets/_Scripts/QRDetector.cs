@@ -113,9 +113,10 @@ public class QRDetector : MonoBehaviour {
         Product p = API_Calls.parseToProduct(json);
 
         arText.text = p.Title + '\n';
-        arText.text += "Qty: " + p.TotalStockLevel + '\n';
+        arText.text += "Total Stock: " + p.TotalStockLevel + '\n';
+        arText.text += "Physical Stock: " + p.StockEntries.PhysicalStockLevel + '\n';
         arText.text += "Price: " + p.Price + '\n';
-        arText.text += "Stock Check?: " + p.StockEntries + '\n';
+        arText.text += "Stock Check Required?: " + p.StockEntries.StockRunningLow + '\n';
         Debug.Log("API Response Received");
     }
 }
