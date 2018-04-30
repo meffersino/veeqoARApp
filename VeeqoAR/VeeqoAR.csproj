@@ -85,12 +85,10 @@
     <Reference Include="zxing.unity">
       <HintPath>Assets/QR Scanner/Scripts/zxing.unity.dll</HintPath>
     </Reference>
-    <Reference Include="Managed/Mono.Cecil">
-      <HintPath>C:/Program Files/Unity/Editor/Data\Managed/Mono.Cecil.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\_Scripts\API_Calls.cs" />
+    <Compile Include="Assets\_Scripts\ProductPageLoader.cs" />
     <Compile Include="Assets\_Scripts\QRDetector.cs" />
     <Compile Include="Assets\_Scripts\SceneLoader.cs" />
     <Compile Include="Assets\ARToolKit5-Unity\Scripts\ARCamera.cs" />

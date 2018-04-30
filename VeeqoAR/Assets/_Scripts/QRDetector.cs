@@ -112,8 +112,10 @@ public class QRDetector : MonoBehaviour {
         JObject json = JObject.Parse(txt);
         Product p = API_Calls.parseToProduct(json);
 
-        arText.text = p.Title;
-
+        arText.text = p.Title + '\n';
+        arText.text += "Qty: " + p.TotalStockLevel + '\n';
+        arText.text += "Price: " + p.Price + '\n';
+        arText.text += "Stock Check?: " + p.StockEntries + '\n';
         Debug.Log("API Response Received");
     }
 }
