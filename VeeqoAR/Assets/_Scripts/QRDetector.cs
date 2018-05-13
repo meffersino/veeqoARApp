@@ -105,18 +105,23 @@ public class QRDetector : MonoBehaviour {
 
         string txt = "";
         if (string.IsNullOrEmpty(www.error))
+        {
             txt = www.text;  //text of success
+            JObject json = JObject.Parse(txt);
+            Product p = API_Calls.parseToProduct(json);
+
+            arText.text = p.Title + '\n';
+            arText.text += "Total Stock: " + p.TotalStockLevel + '\n';
+            arText.text += "Physical Stock: " + p.StockEntries.PhysicalStockLevel + '\n';
+            arText.text += "Price: " + p.Price + '\n';
+            arText.text += "Stock Check Required?: " + p.StockEntries.StockRunningLow + '\n';
+            Debug.Log("API Response Received");
+        }    
         else
+        {
             txt = www.error;  //error
-
-        JObject json = JObject.Parse(txt);
-        Product p = API_Calls.parseToProduct(json);
-
-        arText.text = p.Title + '\n';
-        arText.text += "Total Stock: " + p.TotalStockLevel + '\n';
-        arText.text += "Physical Stock: " + p.StockEntries.PhysicalStockLevel + '\n';
-        arText.text += "Price: " + p.Price + '\n';
-        arText.text += "Stock Check Required?: " + p.StockEntries.StockRunningLow + '\n';
-        Debug.Log("API Response Received");
+            arText.text = "Invalid QR code";
+            Debug.Log("Invalid QR Code.");
+        }
     }
 }

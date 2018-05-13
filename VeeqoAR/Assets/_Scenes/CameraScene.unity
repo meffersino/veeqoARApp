@@ -377,11 +377,7 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1192190356}
-  m_Text: 'Product: AAAAAA
-
-    Quantity: 10
-
-    Stock Check: Required'
+  m_Text: Reading...
   m_OffsetZ: 0
   m_CharacterSize: 1
   m_LineSpacing: 1
@@ -394,7 +390,7 @@ TextMesh:
   m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
   m_Color:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 4279177181
 --- !u!23 &1192190359
 MeshRenderer:
   m_ObjectHideFlags: 0
