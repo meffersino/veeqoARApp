@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class ProductPageLoader : MonoBehaviour {
-    
+    public string productURL = "";
+
     public void OnMouseDown()
     {
-        OpenProductPage("https://www.veeqo.com/");
+        string url = "https://app.veeqo.com/products/" + productURL;
+        OpenProductPage(url);
     }
 
 	public void OpenProductPage(string url)

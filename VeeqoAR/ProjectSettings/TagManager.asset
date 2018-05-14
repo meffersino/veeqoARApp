@@ -11,6 +11,7 @@ TagManager:
   - MegaHit
   - Controller
   - ARText
+  - ProductLoader
   layers:
   - Default
   - TransparentFX

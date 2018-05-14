@@ -13,18 +13,21 @@ public class QRDetector : MonoBehaviour {
     private ARTrackedObject arTrackedObj;
     private Camera c = null;
     private Texture2D tex;
-    private string CurrentQR;
+    private string CurrentQR = "";
     private int width, height;
     private BarcodeReader barcodeReader;
     private RenderTexture rt;
 
     public TextMesh arText;
+    public GameObject backgroundQuad;
 
     public float GPUTransferRate = 1.0f;
     private float timeSinceLastGPUTransfer = 0.0f;
 
     private int W;
     private int H;
+
+    private ProductPageLoader productLoader;
 
     //Logging
     private const string LogTag = "QRDetector: ";
@@ -45,6 +48,8 @@ public class QRDetector : MonoBehaviour {
         tex = new Texture2D(W, H, TextureFormat.RGB24, false);
 
         barcodeReader = new BarcodeReader { AutoRotate = false };
+        
+        productLoader = backgroundQuad.GetComponent<ProductPageLoader>();
 
         //Debug.Log(LogTag + "QR Detection Initialised");
     }
@@ -70,21 +75,24 @@ public class QRDetector : MonoBehaviour {
             if (result != null)
             {
                 //Fetch API Key
-                string API_Key = System.IO.File.ReadAllText(@"C:\Users\Thomas Fisher\Documents\GitHub\API Keys\API-KEY.txt");
+                string API_Key = "c3be72f013597ccd941c49d4f14246b1";//System.IO.File.ReadAllText(@"C:\Users\Thomas Fisher\Documents\GitHub\API Keys\API-KEY.txt");
                 Debug.Log("API_KEY = " + API_Key);
 
-                CurrentQR = result.Text;
-                Debug.Log(LogTag + CurrentQR);
+                if (!CurrentQR.Equals(result.Text))
+                {
+                    CurrentQR = result.Text;
+                    Debug.Log(LogTag + CurrentQR);
 
-                //Product p = API_Calls.getProductByURL(CurrentQR);
+                    //Product p = API_Calls.getProductByURL(CurrentQR);
 
-                Debug.Log("Making API Request.");
-                Dictionary<string, string> headers = new Dictionary<string, string>();
-                headers.Add("Content-Type", "application/json");
-                headers.Add("x-api-key", API_Key);
-                ///GET by IIS hosting...
-                WWW api = new WWW(CurrentQR, null, headers);
-                StartCoroutine(WaitForWWW(api));
+                    Debug.Log("Making API Request.");
+                    Dictionary<string, string> headers = new Dictionary<string, string>();
+                    headers.Add("Content-Type", "application/json");
+                    headers.Add("x-api-key", API_Key);
+                    ///GET by IIS hosting...
+                    WWW api = new WWW(CurrentQR, null, headers);
+                    StartCoroutine(WaitForWWW(api));
+                }
 
                 //arText.text = .Title;
             }
@@ -110,12 +118,17 @@ public class QRDetector : MonoBehaviour {
             JObject json = JObject.Parse(txt);
             Product p = API_Calls.parseToProduct(json);
 
+            productLoader.productURL = p.Id;
+            Debug.Log("Product URL ID: " + productLoader.productURL);
+
             arText.text = p.Title + '\n';
             arText.text += "Total Stock: " + p.TotalStockLevel + '\n';
             arText.text += "Physical Stock: " + p.StockEntries.PhysicalStockLevel + '\n';
             arText.text += "Price: " + p.Price + '\n';
             arText.text += "Stock Check Required?: " + p.StockEntries.StockRunningLow + '\n';
+            Handheld.Vibrate();
             Debug.Log("API Response Received");
+
         }    
         else
         {

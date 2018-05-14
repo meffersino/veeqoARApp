@@ -2,7 +2,7 @@
 All Assemblies
 ---------------------------------------------------
 Summary:
-  Total Type Removals = 3296
+  Total Type Removals = 3295
     Nested = 201
     Interfaces = 203
     Abstract Classes = 252
@@ -11,7 +11,7 @@ Summary:
     Generic Abstract Classes = 1
     Attributes = 264
   Total Field Removals = 1237
-  Total Method Removals = 13784
+  Total Method Removals = 13796
 ---------------------------------------------------
 ---------------------------------------------------
 Assembly: Mono.Security
@@ -13068,7 +13068,7 @@ Summary:
 Assembly: UnityEngine
 ---------------------------------------------------
 Summary:
-  Total Type Removals = 862
+  Total Type Removals = 861
     Nested = 23
     Interfaces = 31
     Abstract Classes = 51
@@ -13077,7 +13077,7 @@ Summary:
     Generic Abstract Classes = 0
     Attributes = 57
   Total Field Removals = 64
-  Total Method Removals = 5144
+  Total Method Removals = 5156
   References Removed = 0
 ---------------------------------------------------
     <PrivateImplementationDetails>
@@ -13832,7 +13832,6 @@ Summary:
         LoadLevelAsync(System.Int32)
         LoadLevelAsync(System.String)
         ObjectToJSString(System.Object)
-        OpenURL(System.String)
         RegisterLogCallback(UnityEngine.Application/LogCallback)
         RegisterLogCallback(UnityEngine.Application/LogCallback,System.Boolean)
         RegisterLogCallbackThreaded(UnityEngine.Application/LogCallback)
@@ -15710,6 +15709,20 @@ Summary:
         userAcceleration_Internal(System.Int32)
     UnityEngine.Halo
     UnityEngine.Handheld
+        .ctor()
+        ClearShaderCache()
+        get_use32BitDisplayBuffer()
+        GetActivityIndicatorStyle()
+        INTERNAL_CALL_PlayFullScreenMovie(System.String,UnityEngine.Color&,UnityEngine.FullScreenMovieControlMode,UnityEngine.FullScreenMovieScalingMode)
+        PlayFullScreenMovie(System.String)
+        PlayFullScreenMovie(System.String,UnityEngine.Color)
+        PlayFullScreenMovie(System.String,UnityEngine.Color,UnityEngine.FullScreenMovieControlMode)
+        PlayFullScreenMovie(System.String,UnityEngine.Color,UnityEngine.FullScreenMovieControlMode,UnityEngine.FullScreenMovieScalingMode)
+        set_use32BitDisplayBuffer(System.Boolean)
+        SetActivityIndicatorStyle(UnityEngine.AndroidActivityIndicatorStyle)
+        SetActivityIndicatorStyleImpl(System.Int32)
+        StartActivityIndicator()
+        StopActivityIndicator()
     UnityEngine.Hash128
     UnityEngine.HeadDoF
     UnityEngine.HeaderAttribute
@@ -18657,7 +18670,6 @@ Summary:
         get_offsetZ()
         get_richText()
         get_tabSize()
-        get_text()
         INTERNAL_get_color(UnityEngine.Color&)
         INTERNAL_set_color(UnityEngine.Color&)
         set_alignment(UnityEngine.TextAlignment)

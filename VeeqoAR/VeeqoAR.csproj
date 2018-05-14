@@ -13,11 +13,13 @@
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Unity Full v3.5</TargetFrameworkProfile>
-    <CompilerResponseFile></CompilerResponseFile>
+    <CompilerResponseFile>
+    </CompilerResponseFile>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>Android:13</UnityBuildTarget>
     <UnityVersion>2017.1.2f1</UnityVersion>
-    <RootNamespace></RootNamespace>
+    <RootNamespace>
+    </RootNamespace>
     <LangVersion>4</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -90,7 +92,6 @@
     <Compile Include="Assets\_Scripts\API_Calls.cs" />
     <Compile Include="Assets\_Scripts\ProductPageLoader.cs" />
     <Compile Include="Assets\_Scripts\QRDetector.cs" />
-    <Compile Include="Assets\_Scripts\SceneLoader.cs" />
     <Compile Include="Assets\ARToolKit5-Unity\Scripts\ARCamera.cs" />
     <Compile Include="Assets\ARToolKit5-Unity\Scripts\ARController.cs" />
     <Compile Include="Assets\ARToolKit5-Unity\Scripts\ARMarker.cs" />
@@ -117,6 +118,7 @@
     <Compile Include="Assets\QR Scanner\Scripts\Scanner\ScannerStatus.cs" />
     <Compile Include="Assets\QR Scanner\Scripts\Settings\ScannerSettings.cs" />
     <Compile Include="Assets\QR Scanner\Scripts\Webcam\UnityWebcam.cs" />
+    <Compile Include="Assets\_Scripts\SceneLoader.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\ARToolKit5-Unity\CHANGELOG.txt" />

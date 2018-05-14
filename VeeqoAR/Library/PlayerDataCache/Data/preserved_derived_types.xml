@@ -1,5 +1,6 @@
 <linker>
 <assembly fullname="Assembly-CSharp">
+<type fullname="ProductPageLoader" preserve="all"/>
 <type fullname="QRDetector" preserve="all"/>
 <type fullname="SceneLoader" preserve="all"/>
 <type fullname="ARCamera" preserve="all"/>

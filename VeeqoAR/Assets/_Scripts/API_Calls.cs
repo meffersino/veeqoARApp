@@ -24,7 +24,6 @@ namespace API
         public string ThumbnailURL { get; set; }
 
         public StockEntries StockEntries { get; set; }
-
     }
 
     public class StockEntries
@@ -51,7 +50,7 @@ namespace API
         static public string BASE_URL = "https://api.veeqo.com/";
         static public string PRODUCTS_URL = "products/";
 
-        private static string API_Key = System.IO.File.ReadAllText(@"C:\Users\Thomas Fisher\Documents\GitHub\API Keys\API-KEY.txt");
+        private static string API_Key = "c3be72f013597ccd941c49d4f14246b1"; //System.IO.File.ReadAllText(@"C:\Users\Thomas Fisher\Documents\GitHub\API Keys\API-KEY.txt");
         /*
         public static void Main()
         {
@@ -82,7 +81,6 @@ namespace API
 
             String response = "";
             JObject json;
-
 
             //ServicePointManager.ServerCertificateValidationCallback = MyRemoteCertificateValidationCallback;
             System.Net.ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls;
